@@ -7,10 +7,10 @@ async function getTrendingMoviesPreview() {
     const trendingPreviewMoviesContainer = document.querySelector('#trendingPreview')
     
     const movieContainer = document.createElement('div');
-    movieContainer.classList.add('movie-container', 'bg-white', 'p-4', 'rounded', 'shadow');
+    movieContainer.classList.add('movie-container', 'bg-white', 'p-2', 'rounded', 'shadow');
 
     const movieImg = document.createElement('img');
-    movieImg.classList.add('w-1/3', 'h-32');
+    movieImg.classList.add('w-full', 'h-auto', 'mb-4');
     movieImg.setAttribute('alt', movie.title);
     movieImg.setAttribute(
       'src',
@@ -23,10 +23,10 @@ async function getTrendingMoviesPreview() {
     const titulo= document.createElement('h3');
     titulo.classList.add('text-lg', 'font-bold', 'text-center');
     titulo.innerText=movie.title;
-
+//añadi la descripción
     const description= document.createElement('p');
-    description.classList.add('text-gray-600', 'mt-2');
-    description.innerText='Aquí la descripción';
+    description.classList.add('text-gray-600', 'mt-2', 'w-64');
+    description.innerText='Descripción: ' + movie.overview;
 //añadi la fecha de lanzamiento
     const releaseDate = document.createElement('p');
     releaseDate.classList.add('text-gray-600', 'mt-2');
